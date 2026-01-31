@@ -1,0 +1,69 @@
+{
+  "name": "@svgdotjs/svg.draw.js",
+  "version": "3.0.2",
+  "description": "An extension for svg.js which allows to draw elements with mouse",
+  "type": "module",
+  "keywords": [
+    "svg.js",
+    "draw",
+    "mouse"
+  ],
+  "bugs": "https://github.com/svgdotjs/svg.draw.js/issues",
+  "license": "MIT",
+  "author": {
+    "name": "Ulrich-Matthias Schäfer"
+  },
+  "homepage": "https://github.com/svgdotjs/svg.draw.js",
+  "module": "dist/svg.draw.js",
+  "main": "dist/svg.draw.umd.cjs",
+  "unpkg": "dist/svg.draw.iife.js",
+  "jsdelivr": "dist/svg.draw.iife.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./svg.draw.js.d.mts",
+        "default": "./dist/svg.draw.js"
+      },
+      "require": {
+        "types": "./svg.draw.js.d.cts",
+        "default": "./dist/svg.draw.umd.cjs"
+      },
+      "browser": {
+        "types": "./svg.draw.js.d.mts",
+        "default": "./dist/svg.draw.js"
+      }
+    }
+  },
+  "files": [
+    "/dist",
+    "/src",
+    "/svg.draw.js.d.cts",
+    "/svg.draw.js.d.mts"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && prettier --write . && eslint ./src && vite build",
+    "zip": "zip -j dist/svg.draw.js.zip -- LICENSE README.md dist/svg.draw.iife.js  dist/svg.draw.iife.js.map  dist/svg.draw.js  dist/svg.draw.js.map  dist/svg.draw.umd.cjs  dist/svg.draw.umd.cjs.map",
+    "prepublishOnly": "rm -rf ./dist && npm run build",
+    "postpublish": "npm run zip"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/svgdotjs/svg.draw.js.git"
+  },
+  "engines": {
+    "node": ">= 14.18"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "eslint": "^9.7.0",
+    "eslint-plugin-import-x": "^3.0.1",
+    "prettier": "^3.3.3",
+    "terser": "^5.31.2",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.4"
+  },
+  "peerDependencies": {
+    "@svgdotjs/svg.js": "^3.2.4"
+  }
+}
