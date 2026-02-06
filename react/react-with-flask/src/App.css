@@ -1,10 +1,21 @@
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  text-align: center; */
+  width: 100%;
+  height: 100vh;;
 }
 
+#drawing-area{
+  width: 100%; 
+  height: 80vh; 
+  border: 2px solid #6c757d; 
+  background-color: transparent; 
+  margin-top: 1rem;
+  position: relative;
+  overflow: hidden; 
+}
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -39,4 +50,75 @@
 
 .read-the-docs {
   color: #888;
+}
+
+
+.shape-list-item {
+  transition: background-color 0.2s ease-out;
+  display: 'flex';
+  justify-content: 'space-between';
+  padding: '5px';
+  border-bottom: '1px solid #444';
+  background-color: #ffad6a88;
+}
+.shape-list-item.hovered {
+  transition: background-color 0.01s ease-in;
+  background-color: #ffad6abb;
+}
+.shape-list-item.freehand {
+  background-color: #63afff88;
+}
+.shape-list-item.hovered.freehand {
+  background-color: #63afffbb;
+}
+.shape-list-item.selected {
+  background-color: #ffad6add;
+}
+.shape-list-item.selected.freehand {
+  background-color: #63afffdd;
+}
+.shape-list-item.hovered.selected {
+  background-color: #ffad6aff;
+}
+.shape-list-item.hovered.selected.freehand {
+  background-color: #63afffff;
+}
+
+svg > polygon,
+svg > rect {
+  transition: fill-opacity 0.2s ease-out, stroke-width 0.2s ease-out;
+  stroke-width: 1;
+  fill-opacity: 0.3;
+  stroke: #000000;
+  fill-opacity: 0.3;
+}
+svg > rect.hovered,
+svg > polygon.hovered {
+  stroke-width: 2;
+  fill-opacity: 0.6;
+  transition: fill-opacity 0.01s ease-in, stroke-width 0.01s ease-in;
+}
+svg > rect:not(.grid) {
+  fill: #6a92ff;
+}
+svg > polygon {
+  fill: #ffad6a;
+}
+svg > polygon.freehand-selection {
+  fill: #f8ec3c;
+}
+svg > polygon.rectangle-selection {
+  fill: #f8ec3c;
+}
+svg > polygon.freehand {
+  fill: #4da0ff;
+}
+svg > rect.selected,
+svg > polygon.selected {
+  stroke-width: 4;
+  fill-opacity: 0.8;
+}
+svg > rect.selected.hovered,
+svg > polygon.selected.hovered {
+  fill-opacity: 1;
 }

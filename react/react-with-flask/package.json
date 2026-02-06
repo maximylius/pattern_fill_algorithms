@@ -14,8 +14,11 @@
   "dependencies": {
     "@svgdotjs/svg.draw.js": "^3.0.2",
     "@svgdotjs/svg.js": "^3.2.5",
+    "bootstrap": "^5.3.8",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-bootstrap": "^2.10.10",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.13.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
