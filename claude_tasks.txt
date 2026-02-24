@@ -1,0 +1,10 @@
+Make suggestions to improve the folder structure. Can i dissolve the folder "react" by moving the folder "react-with-flask" up one level?
+
+I had created a venv folder. Somehow it seems that it got not pushed to github.
+
+I want add an install script in package.json that creates an virtual environment (called patterns if that name is still available using the most up to date python version available on machine. Then it should install all python libraries that are required in the api scripts.) 
+And i then want to add the path in which the packages are saved to git ignore. Rather than cloning those files via downloading it from gihtub they shall be recreated using the install command. THe same shall be true for the node modules if possible. 
+
+Do you recommned using typescript for this project? Can you convert the existing code to typescript?
+
+
