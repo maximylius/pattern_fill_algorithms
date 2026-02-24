@@ -1,0 +1,22 @@
+# Python
+venv/
+.venv/
+env/
+api/patterns/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Node / React
+node_modules/
+dist/
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude Code
+.claude/
